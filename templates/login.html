@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <form class="form-container" action="log" method="post">
+        {% csrf_token %}
+        <h2 class="text-white px-2 pb-2 ">Log in..</h2>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="text-white">Email address</label>
+          <input name="username" type="email" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="text-white">Password</label>
+          <input name="pass" type="password" class="form-control" id="myInput"
+            aria-describedby="emailHelp">
+          <input type="checkbox" onclick="myFunction()" class="form-text text-light">Show Password
+          <small id="emailHelp" class="form-text text-light">We'll never share your Password with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary text-white">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <style>
+    .form-container {
+      position: absolute;
+      top: 25vh;
+
+      /* position:center; */
+    }
+
+    body {
+      background-image: url("https://images.squarespace-cdn.com/content/v1/570692abc6fc084475691741/1535082697684-R5WV7R91X38QMO1NV5BO/ke17ZwdGBToddI8pDm48kN-iCp0H8EbLNb85VXvIfntZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxbJ6nT22MqkKTNnYny1wnkClHS-tzM1oczfpRGL4qDHKXlZBeQsEdLEUBRJKqSpxE/unified-patents.gif?format=2500w");
+    }
+  </style>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
